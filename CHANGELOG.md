@@ -15,8 +15,9 @@ Improved logging options:
 
 No deprecation messages on Node 0.8.
 
+Do not assume /tmp directory exists.
+
 Works with request 2.11 by implementing a do nothing response.connection event
-emitter.
 
 
 ## Version 1.5.3 2012-06-30

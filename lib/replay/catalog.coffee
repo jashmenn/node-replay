@@ -7,6 +7,9 @@ exists = File.exists || Path.exists
 existsSync = File.existsSync || Path.existsSync
 
 
+existsSync = File.existsSync || Path.existsSync
+
+
 mkdir = (pathname, callback)->
   exists pathname, (found)->
     if found
@@ -60,7 +63,7 @@ class Catalog
     matchers.push matcher
 
     uid = +new Date
-    tmpfile = "/tmp/node-replay.#{uid}"
+    tmpfile = "#{@basedir}/node-replay.#{uid}"
     pathname = "#{@basedir}/#{host}"
     logger = request.replay.logger
     logger.log "Creating #{pathname}"
